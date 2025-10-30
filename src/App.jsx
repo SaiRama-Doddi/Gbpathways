@@ -8,6 +8,7 @@ import ImageGrid from './pages/ImagesGrid'
 import VisaGuide from './pages/VisaGuide'
 import WhyChooseUs from './pages/WhyChooseUs'
 import Services from './pages/Services'
+import HomePage from './pages/HomePage'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
      <Navbar />
- 
+    <HomePage/>
      <VisaGuide/>
      <Services/>
      <FreeConsultation />
