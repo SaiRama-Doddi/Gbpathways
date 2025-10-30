@@ -5,7 +5,9 @@ import Navbar from './components/Navbar'
 import Exams from './pages/Exams'
 import FreeConsultation from './pages/FreeConsultation'
 import ImageGrid from './pages/ImagesGrid'
+import VisaGuide from './pages/VisaGuide'
 import WhyChooseUs from './pages/WhyChooseUs'
+import Services from './pages/Services'
 
 function App() {
 
@@ -13,10 +15,13 @@ function App() {
   return (
     <>
      <Navbar />
-     <ImageGrid/>
+ 
+     <VisaGuide/>
+     <Services/>
      <FreeConsultation />
      <WhyChooseUs/>
      <Exams/>
+         <ImageGrid/>
      <Footer />    
 
    </>
