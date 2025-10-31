@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X, GraduationCap } from "lucide-react";
-import { countries } from '../data/countries';
 
 const Navbar = ({ onNavigate, currentSection }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,15 +23,20 @@ const Navbar = ({ onNavigate, currentSection }) => {
     { id: "progress-tracking", name: "Progress Tracking" },
   ];
 
+  // Close desktop dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target) &&
+        !isMobileMenuOpen // ignore mobile
+      ) {
         setActiveDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const handleNavigation = (section, subSection) => {
     if (onNavigate) onNavigate(section, subSection);
@@ -41,7 +45,7 @@ const Navbar = ({ onNavigate, currentSection }) => {
   };
 
   const toggleDropdown = (dropdown) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+    setActiveDropdown((prev) => (prev === dropdown ? null : dropdown));
   };
 
   return (
@@ -63,54 +67,46 @@ const Navbar = ({ onNavigate, currentSection }) => {
         </div>
 
         {/* Desktop Menu */}
-        <ul
-          ref={dropdownRef}
-          className="hidden md:flex space-x-8 font-medium text-[16px]"
-        >
+        <ul ref={dropdownRef} className="hidden md:flex space-x-8 font-medium text-[16px]">
           <li
             onClick={() => handleNavigation("home")}
-            className={`cursor-pointer hover:text-[#60a5fa] transition duration-300 ${
+            className={`cursor-pointer hover:text-[#60a5fa] ${
               currentSection === "home" ? "text-[#60a5fa]" : ""
             }`}
           >
             Home
           </li>
-
-          {/* Services */}
           <li
             onClick={() => handleNavigation("services")}
-            className={`cursor-pointer hover:text-[#60a5fa] transition duration-300 ${
+            className={`cursor-pointer hover:text-[#60a5fa] ${
               currentSection === "services" ? "text-[#60a5fa]" : ""
             }`}
           >
             Services
           </li>
 
-          {/* Countries Dropdown */}
+          {/* Countries Dropdown (Desktop) */}
           <li className="relative cursor-pointer">
             <div
               onClick={() => toggleDropdown("countries")}
-              className="flex items-center hover:text-[#60a5fa] transition duration-300"
+              className="flex items-center hover:text-[#60a5fa]"
             >
               Countries
               <ChevronDown
-                className={`ml-1 w-4 h-4 transition-transform duration-300 ${
+                className={`ml-1 w-4 h-4 transition-transform ${
                   activeDropdown === "countries" ? "rotate-180" : ""
                 }`}
               />
             </div>
-
             {activeDropdown === "countries" && (
               <ul className="absolute left-0 mt-3 w-44 bg-white text-gray-800 rounded-xl shadow-xl animate-fadeIn">
                 {countries.map((country) => (
                   <li
                     key={country.id}
-                    onClick={() =>
-                      handleNavigation("country", country.id)
-                    }
-                    className="px-4 py-2 hover:bg-[#60a5fa] hover:text-white rounded-lg transition duration-200 flex items-center space-x-2"
+                    onClick={() => handleNavigation("country", country.id)}
+                    className="px-4 py-2 hover:bg-[#60a5fa] hover:text-white rounded-lg flex items-center space-x-2"
                   >
-                    <span className="text-xl">{country.flag}</span>
+                    <span>{country.flag}</span>
                     <span>{country.name}</span>
                   </li>
                 ))}
@@ -118,29 +114,26 @@ const Navbar = ({ onNavigate, currentSection }) => {
             )}
           </li>
 
-          {/* Exams Dropdown */}
+          {/* Exams Dropdown (Desktop) */}
           <li className="relative cursor-pointer">
             <div
               onClick={() => toggleDropdown("exams")}
-              className="flex items-center hover:text-[#60a5fa] transition duration-300"
+              className="flex items-center hover:text-[#60a5fa]"
             >
               Exams
               <ChevronDown
-                className={`ml-1 w-4 h-4 transition-transform duration-300 ${
+                className={`ml-1 w-4 h-4 transition-transform ${
                   activeDropdown === "exams" ? "rotate-180" : ""
                 }`}
               />
             </div>
-
             {activeDropdown === "exams" && (
               <ul className="absolute left-0 mt-3 w-56 bg-white text-gray-800 rounded-xl shadow-xl animate-fadeIn">
                 {examCategories.map((exam) => (
                   <li
                     key={exam.id}
-                    onClick={() =>
-                      handleNavigation("exams", exam.id)
-                    }
-                    className="px-4 py-2 hover:bg-[#60a5fa] hover:text-white rounded-lg transition duration-200"
+                    onClick={() => handleNavigation("exams", exam.id)}
+                    className="px-4 py-2 hover:bg-[#60a5fa] hover:text-white rounded-lg"
                   >
                     {exam.name}
                   </li>
@@ -151,7 +144,7 @@ const Navbar = ({ onNavigate, currentSection }) => {
 
           <li
             onClick={() => handleNavigation("visa-guide")}
-            className={`cursor-pointer hover:text-[#60a5fa] transition duration-300 ${
+            className={`cursor-pointer hover:text-[#60a5fa] ${
               currentSection === "visa-guide" ? "text-[#60a5fa]" : ""
             }`}
           >
@@ -160,7 +153,7 @@ const Navbar = ({ onNavigate, currentSection }) => {
 
           <li
             onClick={() => handleNavigation("about")}
-            className={`cursor-pointer hover:text-[#60a5fa] transition duration-300 ${
+            className={`cursor-pointer hover:text-[#60a5fa] ${
               currentSection === "about" ? "text-[#60a5fa]" : ""
             }`}
           >
@@ -185,20 +178,14 @@ const Navbar = ({ onNavigate, currentSection }) => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-[#0f172a]/95 text-white px-6 pb-6 animate-fadeIn">
           <ul className="flex flex-col space-y-4 mt-3 font-medium text-lg">
-            <li
-              onClick={() => handleNavigation("home")}
-              className="hover:text-[#60a5fa] transition duration-300"
-            >
+            <li onClick={() => handleNavigation("home")} className="hover:text-[#60a5fa]">
               Home
             </li>
-            <li
-              onClick={() => handleNavigation("services")}
-              className="hover:text-[#60a5fa] transition duration-300"
-            >
+            <li onClick={() => handleNavigation("services")} className="hover:text-[#60a5fa]">
               Services
             </li>
 
-            {/* Mobile Countries */}
+            {/* Countries Mobile */}
             <li>
               <div
                 onClick={() => toggleDropdown("countries-mobile")}
@@ -206,7 +193,7 @@ const Navbar = ({ onNavigate, currentSection }) => {
               >
                 Countries
                 <ChevronDown
-                  className={`ml-1 w-5 h-5 transition-transform duration-300 ${
+                  className={`ml-1 w-5 h-5 transition-transform ${
                     activeDropdown === "countries-mobile" ? "rotate-180" : ""
                   }`}
                 />
@@ -216,10 +203,8 @@ const Navbar = ({ onNavigate, currentSection }) => {
                   {countries.map((country) => (
                     <li
                       key={country.id}
-                      onClick={() =>
-                        handleNavigation("country", country.id)
-                      }
-                      className="hover:text-[#60a5fa] transition duration-300 cursor-pointer"
+                      onClick={() => handleNavigation("country", country.id)}
+                      className="hover:text-[#60a5fa]"
                     >
                       {country.flag} {country.name}
                     </li>
@@ -228,7 +213,7 @@ const Navbar = ({ onNavigate, currentSection }) => {
               )}
             </li>
 
-            {/* Mobile Exams */}
+            {/* Exams Mobile */}
             <li>
               <div
                 onClick={() => toggleDropdown("exams-mobile")}
@@ -236,7 +221,7 @@ const Navbar = ({ onNavigate, currentSection }) => {
               >
                 Exams
                 <ChevronDown
-                  className={`ml-1 w-5 h-5 transition-transform duration-300 ${
+                  className={`ml-1 w-5 h-5 transition-transform ${
                     activeDropdown === "exams-mobile" ? "rotate-180" : ""
                   }`}
                 />
@@ -246,10 +231,8 @@ const Navbar = ({ onNavigate, currentSection }) => {
                   {examCategories.map((exam) => (
                     <li
                       key={exam.id}
-                      onClick={() =>
-                        handleNavigation("exams", exam.id)
-                      }
-                      className="hover:text-[#60a5fa] transition duration-300 cursor-pointer"
+                      onClick={() => handleNavigation("exams", exam.id)}
+                      className="hover:text-[#60a5fa]"
                     >
                       {exam.name}
                     </li>
@@ -260,14 +243,11 @@ const Navbar = ({ onNavigate, currentSection }) => {
 
             <li
               onClick={() => handleNavigation("visa-guide")}
-              className="hover:text-[#60a5fa] transition duration-300"
+              className="hover:text-[#60a5fa]"
             >
               Visa Guide
             </li>
-            <li
-              onClick={() => handleNavigation("about")}
-              className="hover:text-[#60a5fa] transition duration-300"
-            >
+            <li onClick={() => handleNavigation("about")} className="hover:text-[#60a5fa]">
               About Us
             </li>
           </ul>
