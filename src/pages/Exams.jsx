@@ -45,10 +45,14 @@ const exams = [
 
 const Exams = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-blue-50 py-16 px-6 md:px-20">
-      <h2 className="mt-16 text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800">
+    <section className="bg-linear-to-b from-white to-blue-50 py-16 px-6 md:px-20">
+      <h2 className="mt-16 text-3xl md:text-4xl font-bold text-center mb-6 text-[#1e3a8a]">
         English Proficiency & Entrance Exams
       </h2>
+      
+        <div className="relative mx-auto w-60 h-1 mb-6 rounded-full bg-gradient-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a] overflow-hidden">
+          <div className="absolute inset-0 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer"></div>
+        </div>
       <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
         Prepare for globally recognized tests that open pathways to international education and career opportunities.
       </p>
@@ -58,9 +62,9 @@ const Exams = () => {
         {exams.map((exam, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border-l-4 border-blue-600 transition-all duration-300 hover:-translate-y-1"
+            className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border-l-4 border-[#1e3a8a] transition-all duration-300 hover:-translate-y-1"
           >
-            <h3 className="text-2xl font-semibold text-blue-700 mb-2">{exam.title}</h3>
+            <h3 className="text-2xl font-semibold text-[#3d91f8] mb-2">{exam.title}</h3>
             <p className="text-gray-600 mb-3">{exam.description}</p>
             <ul className="text-gray-500 text-sm space-y-1">
               {exam.highlights.map((point, i) => (

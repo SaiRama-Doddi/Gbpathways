@@ -9,6 +9,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import { Target,  UserCheck } from "lucide-react";
+
 const HomePage = ({ onNavigate }) => {
   const features = [
     {
@@ -109,22 +111,45 @@ const HomePage = ({ onNavigate }) => {
   
 
       {/* CTA Section */}
-      <section className="py-20 bg-linear-to-r from-[#0f172a] via-[#1e3a8a] to-[#60a5fa] text-white text-center">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Start Your Journey?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Get personalized guidance from our expert counselors
-          </p>
-          <button
-            onClick={() => onNavigate && onNavigate("contact")}
-            className="bg-yellow-400 text-blue-900 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors shadow-lg"
-          >
-            Contact Us
-          </button>
-        </div>
-      </section>
+   
+
+<section className="py-20 bg-gradient-to-r from-[#0f172a] via-[#1e3a8a] to-[#60a5fa] text-white text-center">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-4xl font-bold mb-6">
+      Ready to Start Your Journey?
+    </h2>
+    <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-12">
+      Discover the path that fits your dreams — explore, plan, and achieve your study or career goals with expert guidance.
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:bg-white/20 transition-all duration-300">
+        <Target className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Personalized Planning</h3>
+        <p className="text-blue-100">
+          Tailor-made guidance aligning your goals and skills with the most suitable study or career path.
+        </p>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:bg-white/20 transition-all duration-300">
+        <Globe className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Global Opportunities</h3>
+        <p className="text-blue-100">
+          Access world-class universities and destinations that open new horizons for your future.
+        </p>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:bg-white/20 transition-all duration-300">
+        <UserCheck className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Expert Mentorship</h3>
+        <p className="text-blue-100">
+          Work with experienced mentors who guide you every step toward achieving your dream goal.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

@@ -113,7 +113,7 @@ const Services = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className="bg-white text-gray-900 py-20 px-6 relative overflow-hidden">
+    <section className="bg-white text-gray-900 py-17 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -122,7 +122,7 @@ const Services = () => {
           </h2>
 
           {/* Animated Gradient Line */}
-          <div className="relative mx-auto w-40 h-1 mb-6 rounded-full bg-gradient-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a] overflow-hidden">
+          <div className="relative mx-auto w-40 h-1 mb-6 rounded-full bg-linear-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a] overflow-hidden">
             <div className="absolute inset-0 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer"></div>
           </div>
 
