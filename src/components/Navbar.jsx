@@ -196,32 +196,14 @@ const Navbar = ({ onNavigate, currentSection }) => {
             </li>
 
             {/* Exams Mobile */}
-            <li>
-              <div
-                onClick={() => toggleDropdown("exams-mobile")}
-                className="flex items-center justify-between cursor-pointer hover:text-[#60a5fa]"
-              >
-                Exams
-                <ChevronDown
-                  className={`ml-1 w-5 h-5 transition-transform ${
-                    activeDropdown === "exams-mobile" ? "rotate-180" : ""
-                  }`}
-                />
-              </div>
-              {activeDropdown === "exams-mobile" && (
-                <ul className="mt-2 pl-4 space-y-2">
-                  {examCategories.map((exam) => (
-                    <li
-                      key={exam.id}
-                      onClick={() => handleNavigation("exams", exam.id)}
-                      className="hover:text-[#60a5fa]"
-                    >
-                      {exam.name}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
+            <li
+            onClick={() => handleNavigation("exam")}
+            className={`cursor-pointer hover:text-[#60a5fa] ${
+              currentSection === "exam" ? "text-[#60a5fa]" : ""
+            }`}
+          >
+            Exams
+          </li>
 
             <li
               onClick={() => handleNavigation("visa-guide")}
