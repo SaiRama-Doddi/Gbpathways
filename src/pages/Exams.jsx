@@ -46,38 +46,27 @@ const exams = [
 const Exams = () => {
   return (
     <section className="bg-gradient-to-b from-white to-blue-50 py-16 px-6 md:px-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800">
+      <h2 className="mt-16 text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800">
         English Proficiency & Entrance Exams
       </h2>
       <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
         Prepare for globally recognized tests that open pathways to international education and career opportunities.
       </p>
 
-      <div className="space-y-10">
+      {/* Grid Layout – 2 Cards per Row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {exams.map((exam, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+            className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border-l-4 border-blue-600 transition-all duration-300 hover:-translate-y-1"
           >
-            {/* Left Content */}
-            <div className="p-6 md:w-1/2">
-              <h3 className="text-2xl font-semibold text-blue-700 mb-3">{exam.title}</h3>
-              <p className="text-gray-600 mb-4">{exam.description}</p>
-              <ul className="text-gray-500 text-sm space-y-1">
-                {exam.highlights.map((point, i) => (
-                  <li key={i}>• {point}</li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Right Image */}
-            <div className="md:w-1/2 w-full h-60 md:h-64 overflow-hidden">
-              <img
-                src={exam.image}
-                alt={exam.title}
-                className="w-full h-full object-cover transform hover:scale-105 transition-all duration-500"
-              />
-            </div>
+            <h3 className="text-2xl font-semibold text-blue-700 mb-2">{exam.title}</h3>
+            <p className="text-gray-600 mb-3">{exam.description}</p>
+            <ul className="text-gray-500 text-sm space-y-1">
+              {exam.highlights.map((point, i) => (
+                <li key={i}>• {point}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
