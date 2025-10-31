@@ -47,37 +47,48 @@ const visaSteps = [
   },
 ];
 
+const visaTypes = [
+  { name: "Student Visa", countries: "USA, UK, Canada, Australia, Europe" },
+  { name: "Work Visa", countries: "USA, UK, Canada, Germany, UAE" },
+  { name: "Tourist Visa", countries: "Schengen, USA, UK, Canada" },
+  { name: "Dependent Visa", countries: "UK, USA, Canada, Australia" },
+];
+
 const VisaGuide = () => {
   return (
-    <section className="bg-linear-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white py-20 px-6">
+    <section className="bg-white text-gray-800 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#60a5fa] mb-3">
+          <h2 className="text-4xl font-extrabold text-[#1e3a8a] mb-3">
             Visa Guidance & Support
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+            {/* Animated Gradient Line */}
+          <div className="relative mx-auto w-40 h-1 mb-6 rounded-full bg-linear-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a] overflow-hidden">
+            <div className="absolute inset-0 before:absolute before:inset-0 before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer"></div>
+          </div>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             From profile evaluation to pre-departure, our experts assist you
-            throughout the entire visa process with complete clarity.
+            throughout the entire visa process with precision and care.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Visa Steps */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {visaSteps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div
                 key={index}
-                className="group bg-[#1e293b]/70 hover:bg-[#60a5fa] transition duration-300 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:scale-[1.03]"
+                className="group bg-white border border-gray-200 hover:border-blue-300 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#60a5fa]/10 group-hover:bg-white transition duration-300 mb-6">
-                  <Icon className="w-8 h-8 text-[#60a5fa] group-hover:text-[#0f172a]" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#e0f2fe] group-hover:bg-[#60a5fa] transition duration-300 mb-6">
+                  <Icon className="w-8 h-8 text-blue-600 group-hover:text-white transition duration-300"  />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 group-hover:text-white">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">
                   {step.title}
                 </h3>
-                <p className="text-gray-300 group-hover:text-gray-100">
+                <p className="text-gray-600 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -85,12 +96,58 @@ const VisaGuide = () => {
           })}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <button className="bg-[#60a5fa] hover:bg-[#1e40af] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:shadow-xl transition duration-300">
-            Get Free Visa Consultation
-          </button>
+        {/* Visa Types */}
+        <div className="bg-white rounded-2xl shadow-md p-10 border border-gray-100 mb-16">
+          <h2 className="text-3xl font-bold text-[#1e3a8a] mb-8 text-center">
+            Visa Types We Handle
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {visaTypes.map((visa, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 hover:border-blue-300 rounded-xl p-6 hover:shadow-md transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {visa.name}
+                </h3>
+                <p className="text-gray-600">
+                  <span className="font-medium text-gray-700">Countries:</span>{" "}
+                  {visa.countries}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Success Rate */}
+        <div className="bg-linear-to-r from-green-600 to-green-400 text-white rounded-2xl p-10 md:p-14 shadow-xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold mb-4">
+              Our Visa Success Rate
+            </h2>
+            <p className="text-blue-50 mb-8 text-lg leading-relaxed">
+              With our expert guidance and meticulous attention to detail, we’ve
+              helped thousands of students secure their visas successfully.
+            </p>
+            <div className="flex flex-wrap justify-center gap-10">
+              <div>
+                <div className="text-5xl font-extrabold mb-1">98%</div>
+                <div className="text-blue-100 text-lg">Success Rate</div>
+              </div>
+              <div>
+                <div className="text-5xl font-extrabold mb-1">5000+</div>
+                <div className="text-blue-100 text-lg">Visas Approved</div>
+              </div>
+              <div>
+                <div className="text-5xl font-extrabold mb-1">15+</div>
+                <div className="text-blue-100 text-lg">Countries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+       
       </div>
     </section>
   );

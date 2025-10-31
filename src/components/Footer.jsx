@@ -80,7 +80,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-[#60a5fa]" />
-              <span>info@eduglobal.com</span>
+              <span>info@gbpathways.com</span>
             </li>
           </ul>
 
@@ -104,7 +104,7 @@ const Footer = () => {
 
       {/* Bottom Text */}
       <div className="text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} <span className="text-[#60a5fa]">EduGlobal</span>. 
+        © {new Date().getFullYear()} <span className="text-[#60a5fa]">GbPathways</span>. 
         All rights reserved.
       </div>
     </footer>

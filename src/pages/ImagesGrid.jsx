@@ -32,8 +32,13 @@ return (
 {/* Heading */}
 <div className="text-center mb-14">
 <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#1e3a8a] tracking-tight">
-Explore Global Education Destinations
+Global Education Destinations
 </h2>
+
+  {/* Animated Gradient Line */}
+          <div className="relative  mx-auto w-60 h-1 mb-6 rounded-full bg-linear-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a] overflow-hidden">
+            <div className="absolute inset-0 before:absolute before:inset-0 before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer"></div>
+          </div>
 <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
 Discover the culture, lifestyle, and educational excellence of top study-abroad countries through these inspiring snapshots.
 </p>
@@ -63,9 +68,7 @@ Discover the culture, lifestyle, and educational excellence of top study-abroad 
 
 {/* Decorative Line */}
 
-<div className="relative mt-16 w-40 h-1 mx-auto rounded-full bg-linear-to-r from-[#1e3a8a] to-[#60a5fa]overflow-hidden">
-  <div className="absolute inset-0 before:absolute before:inset-0 before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer"></div>
-</div>
+
 
 
 </section>

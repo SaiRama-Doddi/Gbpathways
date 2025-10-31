@@ -52,27 +52,33 @@ const Services = () => {
     <section className="bg-white text-gray-900 py-20 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#0f172a] mb-3">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-[#0f172a] mb-4">
             Our Premium Services
           </h2>
+
+          {/* Animated Gradient Line */}
+          <div className="relative mx-auto w-40 h-1 mb-6 rounded-full bg-linear-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a] overflow-hidden">
+            <div className="absolute inset-0 before:absolute before:inset-0 before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer"></div>
+          </div>
+
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             We provide complete guidance and personalized support to make your
             overseas education dream come true — every step of the way.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={index}
-                className="group bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden"
+                className="group bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden"
               >
-                {/* Hover Gradient Overlay */}
-                <div className="absolute inset-0 bg-linear-to-r from-[#3b82f6] to-[#60a5fa] opacity-0 group-hover:opacity-10 transition duration-300"></div>
+                {/* Subtle hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#60a5fa]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 <div className="relative z-10">
                   <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#e0f2fe] group-hover:bg-[#60a5fa] transition duration-300 mb-6">
@@ -89,20 +95,21 @@ const Services = () => {
             );
           })}
         </div>
-
-        {/* CTA Button */}
-        <div className="text-center mt-16">
-          <button className="bg-[#3b82f6] hover:bg-[#1e40af] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-md hover:shadow-xl transition duration-300">
-            Explore All Services
-          </button>
-        </div>
       </div>
 
-      {/* Background subtle animated shapes */}
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#60a5fa]/20 rounded-full blur-3xl animate-pulse"></div>
+      {/* Animated background orbs */}
+      <div className="absolute -top-24 -left-20 w-72 h-72 bg-[#60a5fa]/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#3b82f6]/10 rounded-full blur-2xl animate-pulse"></div>
     </section>
   );
 };
 
 export default Services;
+
+/* Add this keyframe animation to your global CSS (App.css or index.css):
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+*/
