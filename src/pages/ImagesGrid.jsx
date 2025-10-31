@@ -44,7 +44,7 @@ const ImageGrid = () => {
       {/* Header */}
       <div className="text-center py-16 px-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-[#1e3a8a] mb-4 tracking-tight">
-          Study in the United Kingdom 🇬🇧
+        Explore Global Education
         </h2>
 
         <div className="relative mx-auto w-60 h-1 mb-6 rounded-full bg-gradient-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a] overflow-hidden">
@@ -62,7 +62,7 @@ const ImageGrid = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 pb-16 items-center">
         <div>
           <h3 className="text-3xl font-bold text-[#1e3a8a] mb-4">
-            Why Study in the UK
+          Why Study Overseas
           </h3>
           <ul className="space-y-3 text-gray-700">
             <li>🎓 High-quality, globally recognized education.</li>
@@ -94,88 +94,16 @@ const ImageGrid = () => {
       </div>
 
       {/* Top Universities */}
-      <div className="bg-gray-50 py-16 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-[#1e3a8a] mb-6">
-            Top Universities in the UK (2025)
-          </h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {universities.map((uni, i) => (
-              <div
-                key={i}
-                className="p-5 rounded-xl shadow-sm bg-white hover:shadow-lg transition duration-300"
-              >
-                <p className="font-semibold text-lg text-gray-800">{uni}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+  
 
       {/* Popular Courses */}
-      <div className="max-w-6xl mx-auto py-16 px-6">
-        <h3 className="text-3xl font-bold text-[#1e3a8a] mb-4 text-center">
-          Popular Courses for International Students
-        </h3>
-        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-gray-700 text-center">
-          {courses.map((course, i) => (
-            <li
-              key={i}
-              className="p-4 bg-white rounded-xl shadow hover:shadow-lg border border-gray-100 transition"
-            >
-              {course}
-            </li>
-          ))}
-        </ul>
-      </div>
+    
 
       {/* Scholarships */}
-      <div className="bg-gray-50 py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-3xl font-bold text-[#1e3a8a] mb-8 text-center">
-            Scholarships in the UK
-          </h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {scholarships.map((s, i) => (
-              <div
-                key={i}
-                className="p-5 bg-white rounded-xl shadow hover:shadow-lg border border-gray-100 transition"
-              >
-                <p className="font-semibold text-gray-800">{s.name}</p>
-                <p className="text-blue-700 font-medium mt-2">{s.grant}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+  
 
       {/* Support Section */}
-      <div className="max-w-6xl mx-auto py-20 px-6 text-center">
-        <h3 className="text-3xl font-bold text-[#1e3a8a] mb-6">
-          Our Support – Yuva Overseas
-        </h3>
-        <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-          From choosing the right university to settling in the UK, Yuva
-          Overseas provides continuous guidance every step of the way.
-        </p>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[
-            "🎯 Post-arrival assistance",
-            "🏫 University support",
-            "📄 Visa & work permit help",
-            "💼 Career and internship guidance",
-            "🤝 Alumni networking",
-            "📞 24/7 ongoing consultation",
-          ].map((support, i) => (
-            <div
-              key={i}
-              className="p-5 bg-white rounded-xl shadow hover:shadow-lg transition border border-gray-100"
-            >
-              {support}
-            </div>
-          ))}
-        </div>
-      </div>
+ 
     </section>
   );
 };

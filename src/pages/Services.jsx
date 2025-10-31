@@ -117,7 +117,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#0f172a] mb-4">
+          <h2 className="text-4xl pt-2 font-bold text-[#0f172a] mb-4">
             Our Premium Services
           </h2>
 

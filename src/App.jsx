@@ -31,10 +31,9 @@ function App() {
       {/* ✅ Home Section */}
       {currentSection === "home" && (
         <>
-          <HomePage />
+          <HomePage onNavigate={handleNavigation} />
           <VisaGuide />
-          <Services />
-          <FreeConsultation />
+          <FreeConsultation  onNavigate={handleNavigation}/>
           <WhyChooseUs />
     
           <ImageGrid />
@@ -45,7 +44,7 @@ function App() {
       {currentSection === "visa-guide" && <VisaGuide />}
 
       {/* ✅ Services */}
-      {currentSection === "services" && <Services />}
+        {currentSection === "services" && <Services />}
 
       {/* ✅ About */}
       {currentSection === "about" && <WhyChooseUs />}

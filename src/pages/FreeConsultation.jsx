@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const FreeConsultation = () => {
   const handleMailClick = () => {
-    const email = "support@youremail.com";
+    const email = "info@gbpathways.com";
     const subject = encodeURIComponent("Free Study Abroad Consultation");
     const body = encodeURIComponent(
       "Hi Team,\n\nI’d like to book a free consultation for study abroad guidance.\nPlease share more details.\n\nThank you!"
@@ -12,7 +12,7 @@ const FreeConsultation = () => {
   };
 
   return (
-    <section className="relative w-full bg-gradient-to-r from-[#0f172a] via-[#1e3a8a] to-[#60a5fa] text-white py-10 overflow-hidden">
+    <section className="relative w-full bg-linear-to-r from-[#0f172a] via-[#1e3a8a] to-[#60a5fa] text-white py-10 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img

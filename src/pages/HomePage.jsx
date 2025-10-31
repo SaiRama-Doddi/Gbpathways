@@ -48,7 +48,7 @@ const HomePage = ({ onNavigate }) => {
   ];
 
   const stats = [
-    { number: "5000+", label: "Students Placed" },
+    { number: "700+", label: "Students Placed" },
     { number: "50+", label: "Partner Universities" },
     { number: "15+", label: "Countries" },
     { number: "98%", label: "Success Rate" },
