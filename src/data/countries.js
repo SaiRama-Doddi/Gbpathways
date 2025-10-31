@@ -247,4 +247,53 @@ export const countries = [
     visaInfo:
       "Student visa (Stamp 2) required. Processing time: 4-8 weeks. Can be extended for post-study work.",
   },
+  {
+    id: "australia",
+    name: "Australia",
+    flag: "🇦🇺",
+    description:
+      "Australia is one of the most popular destinations for international students, known for its high academic standards, research excellence, and vibrant multicultural society.",
+    whyStudy: [
+      "Globally recognized degrees and universities",
+      "Safe and student-friendly environment",
+      "Post-study work visa up to 4 years",
+      "Strong industry links and internship options",
+      "Diverse and multicultural student community",
+      "High standard of living with work opportunities",
+    ],
+    topUniversities: [
+      "University of Melbourne",
+      "Australian National University",
+      "University of Sydney",
+      "University of Queensland",
+      "Monash University",
+      "University of New South Wales (UNSW)",
+      "University of Western Australia",
+      "RMIT University",
+    ],
+    popularCourses: [
+      "Information Technology and Computer Science",
+      "Business and Management",
+      "Engineering and Architecture",
+      "Health and Biomedical Sciences",
+      "Environmental Science",
+      "Accounting and Finance",
+      "Hospitality and Tourism",
+      "Education",
+    ],
+    admissionRequirements: [
+      "Bachelor’s degree or equivalent qualification",
+      "English proficiency test (IELTS/TOEFL/PTE)",
+      "Statement of Purpose",
+      "Letters of Recommendation",
+      "Academic transcripts",
+      "CV/Resume",
+      "Passport and financial documents",
+    ],
+    costOfLiving: "AUD 18,000 - 25,000 per year (varies by city)",
+    workOpportunities:
+      "20 hours per week during study and unlimited during breaks. 2–4 years post-study work visa for graduates.",
+    visaInfo:
+      "Subclass 500 Student Visa required. Processing time: 4–8 weeks. Allows dependents and work rights.",
+  },
 ];
