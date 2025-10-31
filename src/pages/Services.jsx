@@ -49,104 +49,6 @@ const mainServices = [
   },
 ];
 
-// Long list of detailed services shown on "Explore All"
-const extendedServices = [
-  {
-    title: "Profile Analysis",
-    description:
-      "Tailored guidance to align study options with your academic background, goals, and interests. We ensure all admission, visa, and scholarship requirements are met.",
-  },
-  {
-    title: "University Shortlisting",
-    description:
-      "We help you evaluate universities based on academics, finances, and location to make informed application decisions.",
-  },
-  {
-    title: "Loan Assistance",
-    description:
-      "Expert advice on education loans, eligibility, documentation, and repayment planning through top financial institutions.",
-  },
-  {
-    title: "Financial Assistance (Funds)",
-    description:
-      "Get advice on funding sources, budgeting, and proving financial stability for visa applications.",
-  },
-  {
-    title: "Mock Interviews",
-    description:
-      "Personalized mock sessions to prepare for university and visa interviews, boosting confidence and performance.",
-  },
-  {
-    title: "Visa Assistance",
-    description:
-      "End-to-end guidance on visa documentation, applications, and interview preparation for higher approval chances.",
-  },
-  {
-    title: "Travel Guidance",
-    description:
-      "Comprehensive support for booking flights, travel insurance, luggage requirements, and customs preparation.",
-  },
-  {
-    title: "Pre-Departure Guidance",
-    description:
-      "Cultural orientation, packing tips, safety measures, and readiness sessions for your academic journey abroad.",
-  },
-  {
-    title: "Post-Arrival Guidance",
-    description:
-      "Assistance with accommodation, transportation, and essential services like banking once you arrive.",
-  },
-  {
-    title: "Part-Time Job Assistance",
-    description:
-      "Help finding part-time jobs abroad, resume building, and understanding student visa work rules.",
-  },
-  {
-    title: "Ongoing Support Throughout Your Journey",
-    description:
-      "Continuous help during and after your studies, ensuring your growth, internships, and global career opportunities.",
-  },
-  {
-    title: "Student Visa",
-    description:
-      "End-to-end student visa support — from documentation to interview preparation — ensuring a smooth approval process.",
-  },
-  {
-    title: "Work Visa",
-    description:
-      "Assistance with job offers, visa applications, interview prep, and sponsorship requirements for working abroad.",
-  },
-  {
-    title: "Tourist Visa",
-    description:
-      "Guidance on tourist visa requirements, documentation, and form submissions for smooth travel experiences.",
-  },
-  {
-    title: "H-1B Visa",
-    description:
-      "Full support for professionals applying for the U.S. H-1B visa — from eligibility to application and interview prep.",
-  },
-  {
-    title: "B1/B2 Visa",
-    description:
-      "Support for U.S. business/tourist visas including slot booking, documentation, and interview preparation.",
-  },
-  {
-    title: "Visiting Visa",
-    description:
-      "Visa assistance for tourism, family, or business visits, covering eligibility checks and interview scheduling.",
-  },
-  {
-    title: "UK Sponsorship Visa",
-    description:
-      "Support in securing a UK Certificate of Sponsorship, completing forms, and meeting official sponsor requirements.",
-  },
-  {
-    title: "Job Placement Support",
-    description:
-      "Resume building, interview prep, and connecting with potential employers after course completion.",
-  },
-];
 
 const Services = () => {
   const [showAll, setShowAll] = useState(false);
@@ -198,40 +100,9 @@ const Services = () => {
           })}
         </div>
 
-        {/* Explore All Button */}
-        <div className="text-center mt-12">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="flex items-center mx-auto bg-[#1e3a8a] hover:bg-[#2563eb] text-white px-6 py-3 rounded-full text-lg font-medium shadow-lg transition-all duration-300"
-          >
-            {showAll ? (
-              <>
-                Hide All Services <ChevronUp className="ml-2" />
-              </>
-            ) : (
-              <>
-                Explore All Services <ChevronDown className="ml-2" />
-              </>
-            )}
-          </button>
-        </div>
+      
 
-        {/* Extended Services (Collapsible Section) */}
-        {showAll && (
-          <div className="mt-14 space-y-6 transition-all duration-700 ease-in-out">
-            {extendedServices.map((item, i) => (
-              <div
-                key={i}
-                className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition duration-300 bg-gray-50"
-              >
-                <h4 className="text-xl font-semibold text-[#1e3a8a] mb-2">
-                  {item.title}
-                </h4>
-                <p className="text-gray-700">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
+      
       </div>
 
       {/* Background Orbs */}
