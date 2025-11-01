@@ -68,7 +68,7 @@ const HomePage = ({ onNavigate }) => {
         <div className="relative z-10 max-w-4xl px-6 text-center animate-fadeUp">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
             Your Journey to{" "}
-            <span className="text-[#60a5fa]">Global Education</span> Begins Here
+            <span className="text-[#1e3a8a]">Global Education</span> Begins Here
           </h1>
           <p className="text-gray-200 text-lg md:text-xl mb-8 leading-relaxed">
             Explore top universities across the world with expert guidance,
