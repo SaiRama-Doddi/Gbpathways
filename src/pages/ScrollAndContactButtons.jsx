@@ -24,7 +24,7 @@ const ScrollAndContactButtons = () => {
   // Mail pre-filled subject & body
   const mailSubject = encodeURIComponent("Inquiry about Study Abroad Services");
   const mailBody = encodeURIComponent(
-    "Hi Sai Rama,\n\nI came across your services and would love to know more about how you can help me with my study abroad plans.\n\nBest regards,\n[Your Name]"
+    "Hi ,\n\nI came across your services and would love to know more about how you can help me with my study abroad plans.\n\nBest regards,\n[Your Name]"
   );
 
   return (
