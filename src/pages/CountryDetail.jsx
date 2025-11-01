@@ -103,6 +103,26 @@ export default function CountryDetail({ countryId, onBack }) {
           </motion.div>
         </div>
 
+           {/* Image Gallery Section */}
+     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {country.images.map((img, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            className="relative rounded-xl overflow-hidden shadow-lg group"
+          >
+            <img
+              src={img.src}
+              alt={img.caption}
+              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-center py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {img.caption}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
 {/* Show Flags if Current Country is Europe */}
 {country.name === "Europe" && (
   <motion.div

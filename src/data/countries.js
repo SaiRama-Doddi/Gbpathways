@@ -1,3 +1,35 @@
+
+
+
+
+
+import ireland1 from "../assets/images/ie-3.jpg";
+import ireland2 from "../assets/images/ie-4.jpg";
+import ireland3 from "../assets/images/ie-2.webp";
+
+import aus1 from "../assets/images/au-1.webp";
+import aus2 from "../assets/images/au-2.webp";
+import aus3 from "../assets/images/au-3.jpg";
+
+
+
+import usa1 from "../assets/images/us-1.jpg";
+import usa2 from "../assets/images/us-2.webp";
+import usa3 from "../assets/images/us-3.jpg";
+
+import canada1 from "../assets/images/ca-1.jpg";
+import canada2 from "../assets/images/ca-5.jpg";
+import canada3 from "../assets/images/ca-4.jpg";
+
+import europe1 from "../assets/images/eu.jpg";
+import europe2 from "../assets/images/eu-2.webp";
+import europe3 from "../assets/images/eu-3.jpg";
+
+import uk1 from "../assets/images/gb.jpg";
+import uk2 from "../assets/images/gb-2.jpg";
+import uk3 from "../assets/images/gb-3.jpg";
+
+
 export const countries = [
   {
     id: "uk",
@@ -6,6 +38,11 @@ export const countries = [
     description:
       "The UK is home to some of the world's oldest and most prestigious universities, offering world-class education and rich cultural experiences.",
     intakes: ["January", "May", "September"],
+   images: [
+      { src: uk1, caption: "London - Big Ben" },
+      { src: uk2, caption: "Cambridge University" },
+      { src: uk3, caption: "Edinburgh Castle" },
+    ],
     whyStudy: [
       "World-renowned universities with global recognition",
       "Shorter course duration compared to other countries",
@@ -56,6 +93,11 @@ export const countries = [
     description:
       "Canada offers high-quality education, affordable tuition, and excellent immigration opportunities in a safe and multicultural environment.",
     intakes: ["January", "May", "September"],
+  images: [
+      { src: canada1, caption: "London - Big Ben" },
+      { src: canada2, caption: "Cambridge University" },
+      { src: canada3, caption: "Edinburgh Castle" },
+    ],
     whyStudy: [
       "High quality education at affordable costs",
       "Safe and welcoming multicultural society",
@@ -106,6 +148,11 @@ export const countries = [
     description:
       "The USA hosts the world's largest number of international students, offering unparalleled academic excellence and career opportunities.",
     intakes: ["January", "May", "August/September"],
+  images: [
+      { src: usa1, caption: "London - Big Ben" },
+      { src: usa2, caption: "Cambridge University" },
+      { src: usa3, caption: "Edinburgh Castle" },
+    ],
     whyStudy: [
       "Home to top-ranked universities globally",
       "Cutting-edge research and innovation facilities",
@@ -157,6 +204,11 @@ export const countries = [
     description:
       "Europe offers diverse education systems, world-leading universities, and affordable tuition across multiple nations in a culturally rich environment.",
     intakes: ["February", "April", "September", "October"],
+   images: [
+      { src: europe1, caption: "London - Big Ben" },
+      { src: europe2, caption: "Cambridge University" },
+      { src: europe3, caption: "Edinburgh Castle" },
+    ],
     subRegions: [
       { country: "🇩🇪 Germany" },
       { country: "🇫🇷 France" },
@@ -230,6 +282,11 @@ export const countries = [
     description:
       "Ireland combines excellent education quality with a booming tech industry, offering international students great career prospects in a friendly English-speaking environment.",
     intakes: ["January", "May", "September"],
+  images: [
+      { src: ireland1, caption: "London - Big Ben" },
+      { src: ireland2, caption: "Cambridge University" },
+      { src: ireland3, caption: "Edinburgh Castle" },
+    ],
     whyStudy: [
       "English-speaking country with welcoming culture",
       "Hub for global tech companies (Google, Facebook, Apple)",
@@ -281,6 +338,11 @@ export const countries = [
     description:
       "Australia is one of the most popular destinations for international students, known for its high academic standards, research excellence, and vibrant multicultural society.",
     intakes: ["February", "July", "November"],
+  images: [
+      { src: aus1, caption: "London - Big Ben" },
+      { src: aus2, caption: "Cambridge University" },
+      { src: aus3, caption: "Edinburgh Castle" },
+    ],
     whyStudy: [
       "Globally recognized degrees and universities",
       "Safe and student-friendly environment",
