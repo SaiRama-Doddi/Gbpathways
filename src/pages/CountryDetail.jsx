@@ -103,6 +103,31 @@ export default function CountryDetail({ countryId, onBack }) {
           </motion.div>
         </div>
 
+
+
+        {/* Intakes Section */}
+<motion.div
+  initial={{ y: 20, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.6 }}
+  className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-100 p-8 mb-10"
+>
+  <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+    <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
+    Intakes
+  </h2>
+  <div className="flex flex-wrap gap-3">
+    {country.intakes.map((intake, index) => (
+      <span
+        key={index}
+        className="bg-blue-100 text-blue-800 font-medium px-4 py-2 rounded-full border border-blue-200 shadow-sm"
+      >
+        {intake}
+      </span>
+    ))}
+  </div>
+</motion.div>
+
         {/* Popular Courses */}
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}

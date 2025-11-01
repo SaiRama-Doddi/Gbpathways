@@ -5,6 +5,7 @@ export const countries = [
     flag: "🇬🇧",
     description:
       "The UK is home to some of the world's oldest and most prestigious universities, offering world-class education and rich cultural experiences.",
+    intakes: ["January", "May", "September"],
     whyStudy: [
       "World-renowned universities with global recognition",
       "Shorter course duration compared to other countries",
@@ -54,6 +55,7 @@ export const countries = [
     flag: "🇨🇦",
     description:
       "Canada offers high-quality education, affordable tuition, and excellent immigration opportunities in a safe and multicultural environment.",
+    intakes: ["January", "May", "September"],
     whyStudy: [
       "High quality education at affordable costs",
       "Safe and welcoming multicultural society",
@@ -103,6 +105,7 @@ export const countries = [
     flag: "🇺🇸",
     description:
       "The USA hosts the world's largest number of international students, offering unparalleled academic excellence and career opportunities.",
+    intakes: ["January", "May", "August/September"],
     whyStudy: [
       "Home to top-ranked universities globally",
       "Cutting-edge research and innovation facilities",
@@ -152,7 +155,30 @@ export const countries = [
     name: "Europe",
     flag: "🇪🇺",
     description:
-      "European countries offer diverse educational experiences, often with low or no tuition fees, in historically rich and culturally vibrant settings.",
+      "Europe offers diverse education systems, world-leading universities, and affordable tuition across multiple nations in a culturally rich environment.",
+    intakes: ["February", "April", "September", "October"],
+    subRegions: [
+      { country: "🇩🇪 Germany" },
+      { country: "🇫🇷 France" },
+      { country: "🇮🇹 Italy" },
+      { country: "🇪🇸 Spain" },
+      { country: "🇳🇱 Netherlands" },
+      { country: "🇸🇪 Sweden" },
+      { country: "🇩🇰 Denmark" },
+      { country: "🇳🇴 Norway" },
+      { country: "🇫🇮 Finland" },
+      { country: "🇨🇭 Switzerland" },
+      { country: "🇧🇪 Belgium" },
+      { country: "🇦🇹 Austria" },
+      { country: "🇵🇱 Poland" },
+      { country: "🇨🇿 Czech Republic" },
+      { country: "🇭🇺 Hungary" },
+      { country: "🇵🇹 Portugal" },
+      { country: "🇬🇷 Greece" },
+      { country: "🇮🇪 Ireland" },
+      { country: "🇱🇺 Luxembourg" },
+      { country: "🇲🇹 Malta" },
+    ],
     whyStudy: [
       "Low or no tuition fees in many countries",
       "High quality education standards",
@@ -203,6 +229,7 @@ export const countries = [
     flag: "🇮🇪",
     description:
       "Ireland combines excellent education quality with a booming tech industry, offering international students great career prospects in a friendly English-speaking environment.",
+    intakes: ["January", "May", "September"],
     whyStudy: [
       "English-speaking country with welcoming culture",
       "Hub for global tech companies (Google, Facebook, Apple)",
@@ -253,6 +280,7 @@ export const countries = [
     flag: "🇦🇺",
     description:
       "Australia is one of the most popular destinations for international students, known for its high academic standards, research excellence, and vibrant multicultural society.",
+    intakes: ["February", "July", "November"],
     whyStudy: [
       "Globally recognized degrees and universities",
       "Safe and student-friendly environment",
