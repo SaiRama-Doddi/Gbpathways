@@ -18,7 +18,7 @@ const ScrollAndContactButtons = () => {
 
   // WhatsApp pre-filled message
   const whatsappMessage = encodeURIComponent(
-    "Hello Sai Rama! 👋\nI'm interested in learning more about your study abroad services. Could you please guide me?"
+    "Hello ! 👋\nI'm interested in learning more about your study abroad services. Could you please guide me?"
   );
 
   // Mail pre-filled subject & body
