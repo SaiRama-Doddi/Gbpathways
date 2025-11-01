@@ -179,3 +179,9 @@ button:focus-visible {
 .animate-fadeIn {
   animation: fadeIn 0.4s ease-in-out;
 }
+
+.flag-emoji {
+  font-family: "Twemoji Country Flags", "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: 4rem; /* adjust as needed */
+  line-height: 1;
+}
