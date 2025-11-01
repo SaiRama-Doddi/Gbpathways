@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
             education. Our expert team ensures that every student gets the
             right direction, mentorship, and support for a successful academic journey.
           </p>
-          <div className="relative w-32 h-1 bg-linear-to-r from-[#1e3a8a] to-[#60a5fa] rounded-full animate-gradient-move">
+          <div className="relative w-52 h-1 bg-linear-to-r from-[#1e3a8a] to-[#60a5fa] rounded-full animate-gradient-move">
 
   <div className="absolute inset-0 before:absolute before:inset-0 before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer"></div>
 

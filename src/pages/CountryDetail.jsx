@@ -129,7 +129,7 @@ export default function CountryDetail({ countryId, onBack }) {
     initial={{ y: 20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.6 }}
-    className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-100 p-8 mb-10"
+    className="bg-white/80 backdrop-blur-md rounded-2xl   p-8 mb-10"
   >
     <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
       Explore 20+ Study Destinations in Europe
@@ -188,7 +188,7 @@ export default function CountryDetail({ countryId, onBack }) {
   initial={{ y: 20, opacity: 0 }}
   animate={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.6 }}
-  className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-100 p-8 mb-10"
+  className="bg-white/80 backdrop-blur-md rounded-2xl mt-2 "
 >
   <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
     <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
