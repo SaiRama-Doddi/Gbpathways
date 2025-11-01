@@ -77,13 +77,14 @@ const HomePage = ({ onNavigate }) => {
           </p>
 
           <div className="flex justify-center">
-            <button
-              onClick={() => onNavigate && onNavigate("services")}
-              className="flex items-center gap-3 bg-[#60a5fa] hover:bg-[#1e3a8a] text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-[#60a5fa]/50 transition-all duration-300"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5" />
-            </button>
+           <button
+  onClick={() => onNavigate("services", null)}
+  className="flex items-center gap-3 bg-[#60a5fa] hover:bg-[#1e3a8a] text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-[#60a5fa]/50 transition-all duration-300"
+>
+  Get Started Today
+  <ArrowRight className="w-5 h-5" />
+</button>
+
           </div>
         </div>
 

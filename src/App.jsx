@@ -17,12 +17,12 @@ function App() {
   const [currentSection, setCurrentSection] = useState("home");
   const [subSection, setSubSection] = useState(null);
 
-  // ✅ Handles navigation from Navbar
-  const handleNavigation = (section, subSection = null) => {
-    setCurrentSection(section);
-    setSubSection(subSection);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // reset scroll behaviour
+const handleNavigation = (section, subSection = null) => {
+  setCurrentSection(section);
+  setSubSection(subSection);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
    const handleBackToHome = () => {
   setCurrentSection("home"); 
