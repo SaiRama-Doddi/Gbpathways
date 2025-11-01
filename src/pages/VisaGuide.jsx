@@ -81,7 +81,7 @@ const VisaGuide = () => {
           <h2 className="text-4xl font-extrabold text-[#1e3a8a] mb-3">
             Visa Guidance & Support
           </h2>
-          <div className="relative mx-auto w-40 h-1 mb-6 rounded-full bg-gradient-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a]" />
+          <div className="relative mx-auto w-40 h-1 mb-6 rounded-full bg-linear-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a]" />
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             From visa selection to pre-departure orientation — we make your
             international journey seamless and stress-free.

@@ -114,7 +114,7 @@ const HomePage = ({ onNavigate }) => {
       {/* CTA Section */}
    
 
-<section className="py-20 bg-gradient-to-r from-[#0f172a] via-[#1e3a8a] to-[#60a5fa] text-white text-center">
+<section className="py-20 bg-linear-to-r from-[#0f172a] via-[#1e3a8a] to-[#60a5fa] text-white text-center">
   <div className="max-w-7xl mx-auto px-6">
     <h2 className="text-4xl font-bold mb-6">
       Ready to Start Your Journey?
