@@ -66,37 +66,53 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-[#60a5fa]" />
-              <span>Visakhapatnam, India</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-[#60a5fa]" />
-              <span>+91 98765 43210</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-[#60a5fa]" />
-              <span>info@gbpathways.com</span>
-            </li>
-          </ul>
+    {/* Contact */}
+<div>
+  <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+  <ul className="space-y-3 text-sm">
+    {/* Addresses */}
+    {["Brighton, UK", "Kandukur, AP", "Guntur, AP", "Visakhapatnam, India"].map((location) => (
+      <li key={location} className="flex items-center gap-2">
+        <MapPin className="w-4 h-4 text-[#60a5fa]" />
+        <span>{location}</span>
+      </li>
+    ))}
 
-          {/* Social Icons */}
-          <div className="flex gap-4 mt-5">
-            {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-              <a
-                key={index}
-                href="#"
-                className="p-2 rounded-full bg-[#1e293b] hover:bg-[#60a5fa] transition duration-300 shadow-md hover:shadow-[#60a5fa]/50"
-              >
-                <Icon className="w-5 h-5 text-gray-200 hover:text-white transition" />
-              </a>
-            ))}
-          </div>
-        </div>
+    {/* Phone */}
+    <li className="flex items-center gap-2">
+      <Phone className="w-4 h-4 text-[#60a5fa]" />
+      <span>+91 7995557371</span>
+    </li>
+
+    {/* Email */}
+    <li className="flex items-center gap-2">
+      <Mail className="w-4 h-4 text-[#60a5fa]" />
+      <span>info@gbpathways.com</span>
+    </li>
+  </ul>
+
+  {/* Social Icons */}
+<div className="flex gap-4 mt-5">
+  {[
+    { Icon: Facebook, link: "https://www.facebook.com/people/GB-Pathways/pfbid02gaP15mUmTcwjPeNRqKWcoo15A13AsapZoTXWJHHqoAPXDpg2QXALzBaBPjW84Loel/" },
+    { Icon: Twitter, link: "https://x.com/GbPathways" },
+    { Icon: Instagram, link: "https://www.instagram.com/gb_pathways/?next=%2F" },
+    { Icon: Linkedin, link: "https://www.linkedin.com/company/yuva-overseas/" },
+  ].map(({ Icon, link }, index) => (
+    <a
+      key={index}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 rounded-full bg-[#1e293b] hover:bg-[#60a5fa] transition duration-300 shadow-md hover:shadow-[#60a5fa]/50"
+    >
+      <Icon className="w-5 h-5 text-gray-200 hover:text-white transition" />
+    </a>
+  ))}
+</div>
+
+</div>
+
       </div>
 
       {/* Divider */}
