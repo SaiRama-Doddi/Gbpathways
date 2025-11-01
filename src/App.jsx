@@ -24,6 +24,12 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+   const handleBackToHome = () => {
+  setCurrentSection("home"); 
+  setSubSection(null);      
+};
+
+
   return (
     <>
       <Navbar onNavigate={handleNavigation} currentSection={currentSection} />
@@ -51,7 +57,7 @@ function App() {
 
       {/* ✅ Country Details */}
       {currentSection === "country" && subSection && (
-        <CountryDetail countryId={subSection} />
+        <CountryDetail countryId={subSection}  onBack={handleBackToHome} />
       )}
 
       {/* ✅ Exams Page (Main or Subsection) */}
