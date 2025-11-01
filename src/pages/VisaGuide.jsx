@@ -79,7 +79,7 @@ const VisaGuide = () => {
         {/* Header */}
         <div className="text-center mb-2">
           <h2 className="text-4xl font-extrabold text-[#1e3a8a] mb-3">
-            Visa Guidance & Support
+            Visa Guidance 
           </h2>
           <div className="relative mx-auto w-40 h-1 mb-6 rounded-full bg-linear-to-r from-[#1e3a8a] via-[#60a5fa] to-[#1e3a8a]" />
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">

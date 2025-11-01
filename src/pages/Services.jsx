@@ -118,7 +118,7 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl pt-4 font-bold text-[#0f172a] mb-4">
-            Our Premium Services
+             Premium Services
           </h2>
 
           {/* Animated Gradient Line */}
