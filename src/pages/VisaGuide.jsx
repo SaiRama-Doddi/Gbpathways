@@ -61,7 +61,15 @@ const visaTypes = [
       "We assist in securing UK sponsorship visas by helping gather required documents, ensuring compliance with government standards, and preparing for interviews effectively.",
     icon: <ShieldCheck className="w-8 h-8 text-blue-600" />,
     countries: "UK",
-  }
+  },
+  {
+  name: "Job Placement Support",
+  description:
+    "We provide end-to-end support for graduates transitioning into the workforce, including career counseling, resume and cover letter assistance, and interview preparation.",
+  icon: <Briefcase className="w-8 h-8 text-blue-600" />,
+  countries: "Global",
+}
+
 ];
 
 const VisaGuide = () => {
