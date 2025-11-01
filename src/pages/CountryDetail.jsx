@@ -26,7 +26,7 @@ export default function CountryDetail({ countryId, onBack }) {
         {/* Back Button */}
         <button
           onClick={onBack}
-          className="flex items-center text-blue-600 hover:text-blue-800 mb-6 transition-all"
+          className="flex items-center text-blue-600 hover:text-blue-800 mb-6 transition-all focus:outline-none focus:ring-0 active:outline-none"
         >
           <ArrowLeft className="w-5 h-5 mr-2" /> Back to Home
         </button>
