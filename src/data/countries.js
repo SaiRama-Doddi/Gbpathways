@@ -22,12 +22,12 @@ import canada2 from "../assets/images/ca-5.jpg";
 import canada3 from "../assets/images/ca-4.jpg";
 
 import europe1 from "../assets/images/eu.jpg";
-import europe2 from "../assets/images/eu-2.webp";
+import europe2 from "../assets/images/eu-4.jpg";
 import europe3 from "../assets/images/eu-3.jpg";
 
 import uk1 from "../assets/images/gb.jpg";
-import uk2 from "../assets/images/gb-2.jpg";
-import uk3 from "../assets/images/gb-3.jpg";
+import uk2 from "../assets/images/gb-4.jpg";
+import uk3 from "../assets/images/gb-2.jpg";
 
 
 export const countries = [
@@ -40,8 +40,8 @@ export const countries = [
     intakes: ["January", "May", "September"],
    images: [
       { src: uk1, caption: "London - Big Ben" },
-      { src: uk2, caption: "Cambridge University" },
-      { src: uk3, caption: "Edinburgh Castle" },
+      { src: uk2, caption: "Scottish Highlands" },
+      { src: uk3, caption: "Lake District" },
     ],
     whyStudy: [
       "World-renowned universities with global recognition",
@@ -94,9 +94,9 @@ export const countries = [
       "Canada offers high-quality education, affordable tuition, and excellent immigration opportunities in a safe and multicultural environment.",
     intakes: ["January", "May", "September"],
   images: [
-      { src: canada1, caption: "London - Big Ben" },
-      { src: canada2, caption: "Cambridge University" },
-      { src: canada3, caption: "Edinburgh Castle" },
+      { src: canada1, caption: "Banff National Par" },
+      { src: canada2, caption: "City of Vancouver" },
+      { src: canada3, caption: "Niagara Falls" },
     ],
     whyStudy: [
       "High quality education at affordable costs",
@@ -149,9 +149,9 @@ export const countries = [
       "The USA hosts the world's largest number of international students, offering unparalleled academic excellence and career opportunities.",
     intakes: ["January", "May", "August/September"],
   images: [
-      { src: usa1, caption: "London - Big Ben" },
-      { src: usa2, caption: "Cambridge University" },
-      { src: usa3, caption: "Edinburgh Castle" },
+      { src: usa1, caption: "Statue of Liberty, New York" },
+      { src: usa2, caption: "Golden Gate Bridge, San Francisco" },
+      { src: usa3, caption: "Grand Canyon, Arizona" },
     ],
     whyStudy: [
       "Home to top-ranked universities globally",
@@ -205,9 +205,9 @@ export const countries = [
       "Europe offers diverse education systems, world-leading universities, and affordable tuition across multiple nations in a culturally rich environment.",
     intakes: ["February", "April", "September", "October"],
    images: [
-      { src: europe1, caption: "London - Big Ben" },
-      { src: europe2, caption: "Cambridge University" },
-      { src: europe3, caption: "Edinburgh Castle" },
+      { src: europe1, caption: "Eiffel Tower, Paris" },
+      { src: europe2, caption: "Amsterdams Canals" },
+      { src: europe3, caption: "Colosseum, Rome" },
     ],
     subRegions: [
       { country: "🇩🇪 Germany" },
@@ -283,9 +283,9 @@ export const countries = [
       "Ireland combines excellent education quality with a booming tech industry, offering international students great career prospects in a friendly English-speaking environment.",
     intakes: ["January", "May", "September"],
   images: [
-      { src: ireland1, caption: "London - Big Ben" },
-      { src: ireland2, caption: "Cambridge University" },
-      { src: ireland3, caption: "Edinburgh Castle" },
+      { src: ireland1, caption: "Dublin" },
+      { src: ireland2, caption: "Giant's Causeway" },
+      { src: ireland3, caption: "Cliffs of Moher" },
     ],
     whyStudy: [
       "English-speaking country with welcoming culture",
@@ -339,9 +339,9 @@ export const countries = [
       "Australia is one of the most popular destinations for international students, known for its high academic standards, research excellence, and vibrant multicultural society.",
     intakes: ["February", "July", "November"],
   images: [
-      { src: aus1, caption: "London - Big Ben" },
-      { src: aus2, caption: "Cambridge University" },
-      { src: aus3, caption: "Edinburgh Castle" },
+      { src: aus1, caption: "Great Barrier Reef" },
+      { src: aus2, caption: "Uluru/Ayers Rock" },
+      { src: aus3, caption: "The Sydney Opera House" },
     ],
     whyStudy: [
       "Globally recognized degrees and universities",
