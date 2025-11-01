@@ -77,7 +77,7 @@ const VisaGuide = () => {
     <section className="bg-white text-gray-800 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-2">
           <h2 className="text-4xl font-extrabold text-[#1e3a8a] mb-3">
             Visa Guidance & Support
           </h2>

@@ -71,7 +71,7 @@ const Footer = () => {
   <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
   <ul className="space-y-3 text-sm">
     {/* Addresses */}
-    {["Brighton, UK", "Kandukur, AP", "Guntur, AP", "Visakhapatnam, India"].map((location) => (
+    {["Brighton, UK", "Kandukur, AP", "Guntur, AP"].map((location) => (
       <li key={location} className="flex items-center gap-2">
         <MapPin className="w-4 h-4 text-[#60a5fa]" />
         <span>{location}</span>
