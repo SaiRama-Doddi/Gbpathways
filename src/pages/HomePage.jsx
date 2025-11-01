@@ -59,11 +59,11 @@ const HomePage = ({ onNavigate }) => {
       {/* Hero Section */}
       <section className="relative w-full h-[90vh] flex items-center justify-center text-white overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1600&q=80"
+          src="https://abroadstudy.in/wp-content/uploads/2024/11/desktop-wallpaper-study-abroad-abroad.jpg"
           alt="Students Abroad"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
 
         <div className="relative z-10 max-w-4xl px-6 text-center animate-fadeUp">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
