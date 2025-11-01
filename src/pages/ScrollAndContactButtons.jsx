@@ -31,7 +31,7 @@ const ScrollAndContactButtons = () => {
     <div className="fixed right-5 bottom-6 flex flex-col items-center gap-4 z-50">
       {/* WhatsApp Button */}
       <a
-        href={`https://wa.me/918500734632?text=${whatsappMessage}`}
+        href={`https://wa.me/917995557371?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition transform hover:scale-110"
