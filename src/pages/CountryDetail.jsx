@@ -103,6 +103,64 @@ export default function CountryDetail({ countryId, onBack }) {
           </motion.div>
         </div>
 
+{/* Show Flags if Current Country is Europe */}
+{country.name === "Europe" && (
+  <motion.div
+    initial={{ y: 20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.6 }}
+    className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-100 p-8 mb-10"
+  >
+    <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+      Explore 20+ Study Destinations in Europe
+    </h2>
+    <p className="text-gray-600 text-center mb-6">
+      Discover top countries across Europe offering world-class education,
+      rich culture, and endless opportunities.
+    </p>
+
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
+      {[
+        { name: "United Kingdom", code: "gb" },
+        { name: "Germany", code: "de" },
+        { name: "France", code: "fr" },
+        { name: "Italy", code: "it" },
+        { name: "Spain", code: "es" },
+        { name: "Netherlands", code: "nl" },
+        { name: "Sweden", code: "se" },
+        { name: "Norway", code: "no" },
+        { name: "Denmark", code: "dk" },
+        { name: "Finland", code: "fi" },
+        { name: "Ireland", code: "ie" },
+        { name: "Belgium", code: "be" },
+        { name: "Switzerland", code: "ch" },
+        { name: "Austria", code: "at" },
+        { name: "Poland", code: "pl" },
+        { name: "Czech Republic", code: "cz" },
+        { name: "Portugal", code: "pt" },
+        { name: "Hungary", code: "hu" },
+        { name: "Greece", code: "gr" },
+        { name: "Malta", code: "mt" },
+        { name: "Estonia", code: "ee" },
+        { name: "Latvia", code: "lv" },
+        { name: "Lithuania", code: "lt" },
+      ].map((country) => (
+        <motion.div
+          key={country.code}
+          whileHover={{ scale: 1.05 }}
+          className="flex flex-col items-center transition-transform"
+        >
+          <img
+            src={`https://flagcdn.com/w80/${country.code}.png`}
+            alt={country.name}
+            className="w-14 h-10 object-cover rounded-md shadow-md border border-gray-200"
+          />
+          <p className="text-sm text-gray-700 mt-2">{country.name}</p>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+)}
 
 
         {/* Intakes Section */}
