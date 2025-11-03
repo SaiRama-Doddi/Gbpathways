@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Globe,
   BookOpen,
@@ -59,7 +60,8 @@ const HomePage = ({ onNavigate }) => {
       {/* Hero Section */}
       <section className="relative w-full h-[90vh] flex items-center justify-center text-white overflow-hidden">
         <img
-          src="https://abroadstudy.in/wp-content/uploads/2024/11/desktop-wallpaper-study-abroad-abroad.jpg"
+          src=
+         "/images/home.jpg"
           alt="Students Abroad"
           className="absolute inset-0 w-full h-full object-cover"
         />

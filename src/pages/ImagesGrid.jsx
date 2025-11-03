@@ -10,21 +10,16 @@ import {
   GlobeLock,
   Rocket,
 } from "lucide-react";
-import img1 from "../assets/images/1.jpg";
-import img2 from "../assets/images/2.jpg";
-import img3 from "../assets/images/3.jpg";
-import img4 from "../assets/images/4.jpg";
-import img5 from "../assets/images/5.jpg";
-import img6 from "../assets/images/6.jpg";
+
 
 const ImageGrid = () => {
   const images = [
-    { src: img1, alt: "Students in UK Campus" },
-    { src: img2, alt: "London Bridge Skyline" },
-    { src: img3, alt: "Student Group Discussion" },
-    { src: img4, alt: "University Library" },
-    { src: img5, alt: "Graduation Celebration" },
-    { src: img6, alt: "Students Exploring City" },
+    { src: "/images/1.webp", alt: "Students in UK Campus" },
+    { src:  "/images/2.webp", alt: "London Bridge Skyline" },
+    { src:  "/images/3.webp", alt: "Student Group Discussion" },
+    { src:  "/images/4.webp", alt: "University Library" },
+    { src:  "/images/5.webp", alt: "Graduation Celebration" },
+    { src:  "/images/6.webp", alt: "Students Exploring City" },
   ];
 
   const universities = [
